@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
     vb.gui = true
+    vb.memory = 2048
+    vb.cpus = 2
+    vb.customize ["modifyvm", :id, "--vram", "128"]
   end
 
   # https://askubuntu.com/questions/1067929/on-18-04-package-virtualbox-guest-utils-does-not-exist
@@ -29,9 +32,12 @@ Vagrant.configure("2") do |config|
   # Optional: Install a more feature-rich applications menu and a keyboard layout plugin
   config.vm.provision "shell", inline: "sudo apt-get install -y xfce4-whiskermenu-plugin xfce4-xkb-plugin"
 
-  # Install dev frameworks and tools
-  config.vm.provision :shell, path: "dev-tools.sh"
+  # Install basic tools like git, etc...
+  config.vm.provision :shell, path: "basics.sh"
 
-  # Install editors
-  config.vm.provision :shell, path: "editors.sh"
+  # Install languages and compilers
+  config.vm.provision :shell, path: "languages.sh"
+
+  # Install tools like editors, ftp-clients, and so on...
+  config.vm.provision :shell, path: "tools.sh"
 end

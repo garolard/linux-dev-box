@@ -1,0 +1,13 @@
+[basics]
+    git
+
+[languages]
+    python
+    nodejs
+
+[tools]
+    emacs25
+    vscode
+    filezilla
+    postman
+    7-zip
