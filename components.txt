@@ -3,7 +3,9 @@
 
 [languages]
     python
+    pip
     nodejs
+    npm
 
 [tools]
     emacs25
@@ -11,3 +13,4 @@
     filezilla
     postman
     7-zip
+    firefox

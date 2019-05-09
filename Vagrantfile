@@ -18,6 +18,8 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--vram", "128"]
   end
 
+  config.vm.synced_folder "D:\\WS", "/home/vagrant/WS"
+
   # https://askubuntu.com/questions/1067929/on-18-04-package-virtualbox-guest-utils-does-not-exist
   config.vm.provision "shell", inline: "sudo apt-add-repository multiverse && sudo apt-get update"
 

@@ -1,4 +1,4 @@
-sudo apt-get install -y emacs25 filezilla p7zip-full
+sudo apt-get install -y emacs25 filezilla p7zip-full firefox
 
 sudo snap install postman
 
