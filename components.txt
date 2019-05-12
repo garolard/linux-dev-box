@@ -1,5 +1,6 @@
 [basics]
     git
+    unzip
 
 [languages]
     python
@@ -14,3 +15,7 @@
     postman
     7-zip
     firefox
+
+[fonts]
+    fira-code
+    source-code-pro
